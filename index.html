@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA 2027 | IEM × UEM</title>
+    <meta name="description" content="Discover campus events, innovation and experiences at IEM and UEM Kolkata.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <a href="#home" class="brand">
+        <div class="college-logos">
+            <div class="logo-crop left-logo">
+                <img src="assets/college-logos.jpeg" alt="IEM logo">
+            </div>
+            <div class="logo-crop right-logo">
+                <img src="assets/college-logos.jpeg" alt="UEM logo">
+            </div>
+        </div>
+
+        <span class="brand-divider"></span>
+        <span class="brand-name">NEXORA<span>27</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#about">About</a>
+        <a href="#register" class="nav-register">Register ↗</a>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="eyebrow">
+            <span class="live-dot"></span>
+            IEM × UEM KOLKATA PRESENTS
+        </p>
+
+        <h1>
+            BEYOND<br>
+            THE <span>ORDINARY.</span>
+        </h1>
+
+        <p class="hero-description">
+            One campus. Endless possibilities.
+            Discover innovation, creativity and experiences
+            that bring ideas to life.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#events" class="btn-primary">Explore Events ↗</a>
+            <a href="#about" class="btn-outline">Discover NEXORA</a>
+        </div>
+
+        <div class="hero-bottom">
+            <div>
+                <span class="small-label">THE EXPERIENCE</span>
+                <h3>INNOVATE. CREATE. INSPIRE.</h3>
+            </div>
+
+            <div class="countdown">
+                <div><strong id="days">00</strong><small>DAYS</small></div>
+                <div><strong id="hours">00</strong><small>HOURS</small></div>
+                <div><strong id="minutes">00</strong><small>MINS</small></div>
+                <div><strong id="seconds">00</strong><small>SECS</small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-tag">SCROLL TO EXPLORE ↓</div>
+
+</section>
+
+
+<!-- HAPPENING NOW AND NEXT -->
+<section class="featured-section section" id="featured">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">DON'T MISS OUT</p>
+            <h2>HAPPENING <span>NOW</span><br>& NEXT.</h2>
+        </div>
+
+        <p class="section-description">
+            From groundbreaking ideas to unforgettable experiences.
+            Find your next campus adventure.
+        </p>
+    </div>
+
+    <div class="featured-grid" id="featuredGrid">
+        <!-- Cards added by JavaScript -->
+    </div>
+
+</section>
+
+
+<!-- ALL EVENTS -->
+<section class="events-section section" id="events">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">FIND YOUR EXPERIENCE</p>
+            <h2>THE EVENT<br><span>UNIVERSE.</span></h2>
+        </div>
+
+        <p class="section-description">
+            Explore everything happening across
+            the IEM and UEM campus community.
+        </p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="event-controls">
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" id="searchInput"
+                   placeholder="Search events...">
+        </div>
+
+        <select id="statusFilter" class="status-select">
+            <option value="all">All statuses</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="upcoming">Upcoming</option>
+        </select>
+
+    </div>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="filter-buttons" id="filterButtons">
+
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="hackathon">Hackathon</button>
+        <button class="filter-btn" data-category="conference">Conference</button>
+        <button class="filter-btn" data-category="robotics">Robotics</button>
+        <button class="filter-btn" data-category="poster">Poster</button>
+        <button class="filter-btn" data-category="workshop">Workshop</button>
+        <button class="filter-btn" data-category="cultural">Cultural</button>
+        <button class="filter-btn" data-category="sports">Sports</button>
+        <button class="filter-btn" data-category="exhibition">Exhibition</button>
+
+    </div>
+
+    <!-- EVENT CARDS -->
+    <div class="event-grid" id="eventGrid">
+        <!-- Cards added by JavaScript -->
+    </div>
+
+    <p class="no-results" id="noResults">
+        No events found. Try another search.
+    </p>
+
+</section>
+
+
+<!-- SCHEDULE -->
+<section class="schedule-section section" id="schedule">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">PLAN YOUR EXPERIENCE</p>
+            <h2>THE <span>LINEUP.</span></h2>
+        </div>
+
+        <p class="section-description">
+            A glimpse of what's planned.
+            Explore the event timetable.
+        </p>
+    </div>
+
+    <div class="schedule-tabs">
+        <button class="schedule-tab active" data-day="1">DAY 01</button>
+        <button class="schedule-tab" data-day="2">DAY 02</button>
+        <button class="schedule-tab" data-day="3">DAY 03</button>
+    </div>
+
+    <div class="timeline" id="timeline">
+        <!-- Timeline added by JavaScript -->
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section section" id="about">
+
+    <div class="about-image">
+        <div class="about-image-overlay"></div>
+        <span>ONE CAMPUS. MANY POSSIBILITIES.</span>
+    </div>
+
+    <div class="about-content">
+        <p class="eyebrow">THE STORY BEHIND NEXORA</p>
+
+        <h2>WHERE IDEAS<br>MEET <span>REALITY.</span></h2>
+
+        <p>
+            NEXORA brings together the spirit of innovation,
+            creativity and collaboration across IEM and UEM Kolkata.
+
+            From technology and entrepreneurship to culture
+            and sports, there's something for everyone.
+        </p>
+
+        <div class="about-stats">
+            <div>
+                <strong>08+</strong>
+                <small>EVENT CATEGORIES</small>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <small>EXPERIENCE DAYS</small>
+            </div>
+
+            <div>
+                <strong>01</strong>
+                <small>CONNECTED COMMUNITY</small>
+            </div>
+        </div>
+
+        <a href="#events" class="btn-primary">Explore the Events ↗</a>
+    </div>
+
+</section>
+
+
+<!-- REGISTRATION -->
+<section class="register-section section" id="register">
+
+    <div class="register-heading">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+
+        <h2>BE PART OF<br><span>THE EXPERIENCE.</span></h2>
+
+        <p>
+            Choose your event and get ready to make
+            something extraordinary.
+        </p>
+    </div>
+
+    <form id="registrationForm" class="registration-form">
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName"
+                       placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="college">College</label>
+                <select id="college" required>
+                    <option value="">Select college</option>
+                    <option>IEM</option>
+                    <option>UEM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="eventChoice">Choose Event</label>
+                <select id="eventChoice" required>
+                    <option value="">Select an event</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone"
+                   placeholder="Enter phone number"
+                   pattern="[0-9]{10}" maxlength="10" required>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">
+            SUBMIT REGISTRATION ↗
+        </button>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+        <p class="demo-notice">
+            Demo registration only. No information is sent to a server.
+        </p>
+
+    </form>
+
+</section>
+
+
+<!-- EVENT DETAILS MODAL -->
+<div class="modal" id="eventModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close" id="modalClose"
+                aria-label="Close">&times;</button>
+
+        <p class="eyebrow" id="modalCategory">EVENT</p>
+
+        <h2 id="modalTitle">Event Title</h2>
+
+        <p id="modalDescription"></p>
+
+        <div class="modal-info">
+            <p><strong>Date:</strong> <span id="modalDate"></span></p>
+            <p><strong>Time:</strong> <span id="modalTime"></span></p>
+            <p><strong>Venue:</strong> <span id="modalVenue"></span></p>
+            <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+        </div>
+
+        <a href="#register" class="btn-primary" id="modalRegister">
+            Register for Event ↗
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div>
+            <h2 class="footer-logo">NEXORA<span>27</span></h2>
+
+            <p>
+                Where innovation meets imagination.
+                IEM × UEM Kolkata.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#about">About</a>
+            <a href="#register">Register</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2027 NEXORA. DEMO COLLEGE EVENT WEBSITE.</p>
+        <p>DESIGNED WITH PURPOSE. BUILT FOR IDEAS.</p>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
